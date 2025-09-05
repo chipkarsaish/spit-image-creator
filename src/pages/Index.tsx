@@ -6,7 +6,6 @@ import { Dashboard } from "./Dashboard";
 import { Transactions } from "./Transactions";
 import { Analytics } from "./Analytics";
 import { Settings } from "./Settings";
-import { Subscription } from "./Subscription";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -21,8 +20,6 @@ const Index = () => {
         return <Analytics />;
       case "settings":
         return <Settings />;
-      case "subscription":
-        return <Subscription />;
       default:
         return <Dashboard />;
     }
