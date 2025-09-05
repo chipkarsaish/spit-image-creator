@@ -33,7 +33,7 @@ const Index = () => {
       <MatrixBackground />
       <Header />
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
-      <main className="ml-80 mt-16 p-8 relative z-10">
+      <main className="ml-80 mt-20 p-8 relative z-10">
         {renderContent()}
       </main>
     </div>
