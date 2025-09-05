@@ -12,15 +12,14 @@ const navigation = [
   { name: "TRANSACTIONS", id: "transactions", icon: CreditCard },
   { name: "FRAUD ALERTS", id: "alerts", icon: AlertTriangle },
   { name: "ANALYTICS", id: "analytics", icon: Eye },
-  { name: "SUBSCRIPTION", id: "subscription", icon: Shield },
   { name: "SETTINGS", id: "settings", icon: Settings },
 ];
 
 export const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
   return (
-    <div className="fixed left-0 top-20 h-[calc(100vh-5rem)] w-80 bg-gradient-cyber border-r border-primary/20 p-6">
+    <div className="fixed left-0 top-20 h-[calc(100vh-5rem)] w-80 bg-gradient-cyber border-r border-primary/20 p-6 flex flex-col justify-between">
       {/* Navigation */}
-      <nav className="space-y-2 mb-12">
+      <nav className="space-y-3">
         {navigation.map((item) => {
           const Icon = item.icon;
           const isActive = activeTab === item.id;
@@ -31,7 +30,7 @@ export const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
               variant="ghost"
               onClick={() => onTabChange(item.id)}
               className={cn(
-                "w-full justify-start gap-3 h-12 px-4 font-mono text-sm tracking-wide transition-all duration-300",
+                "w-full justify-start gap-3 h-14 px-4 font-mono text-sm tracking-wide transition-all duration-300",
                 isActive
                   ? "bg-primary/10 text-primary border border-primary/30 shadow-glow"
                   : "text-muted-foreground hover:text-primary hover:bg-primary/5 hover:border-primary/20 border border-transparent"
