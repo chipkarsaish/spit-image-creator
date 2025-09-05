@@ -18,23 +18,7 @@ const navigation = [
 
 export const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
   return (
-    <div className="fixed left-0 top-0 h-screen w-80 bg-gradient-cyber border-r border-primary/20 p-6 overflow-y-auto">
-      {/* Logo */}
-      <div className="flex items-center gap-3 mb-12">
-        <div className="relative">
-          <Shield className="h-8 w-8 text-primary animate-pulse-glow" />
-          <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold text-primary tracking-wider">
-            OBSIDIAN WATCH
-          </h1>
-          <p className="text-xs text-muted-foreground font-mono">
-            Real-time Fraud Detection Platform
-          </p>
-        </div>
-      </div>
-
+    <div className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-80 bg-gradient-cyber border-r border-primary/20 p-6">
       {/* Navigation */}
       <nav className="space-y-2">
         {navigation.map((item) => {
@@ -62,31 +46,6 @@ export const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
           );
         })}
       </nav>
-
-      {/* System Status */}
-      <div className="mt-12 p-4 bg-gradient-card border border-primary/20 rounded-lg">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-mono text-muted-foreground">SYSTEM ACTIVE</span>
-          <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs text-primary font-mono">ONLINE</span>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span className="text-muted-foreground">THREAT LEVEL:</span>
-            <span className="text-warning font-mono">MEDIUM</span>
-          </div>
-          <div className="flex justify-between text-xs">
-            <span className="text-muted-foreground">UPTIME:</span>
-            <span className="text-primary font-mono">99.9%</span>
-          </div>
-          <div className="flex justify-between text-xs">
-            <span className="text-muted-foreground">STATUS:</span>
-            <span className="text-success font-mono">MONITORING</span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

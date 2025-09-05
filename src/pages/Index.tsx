@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MatrixBackground } from "@/components/background/MatrixBackground";
 import { Dashboard } from "./Dashboard";
@@ -30,8 +31,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <MatrixBackground />
+      <Header />
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
-      <main className="ml-80 p-8 relative z-10">
+      <main className="ml-80 mt-16 p-8 relative z-10">
         {renderContent()}
       </main>
     </div>
