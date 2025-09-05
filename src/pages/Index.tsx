@@ -6,6 +6,7 @@ import { Dashboard } from "./Dashboard";
 import { Transactions } from "./Transactions";
 import { Analytics } from "./Analytics";
 import { Settings } from "./Settings";
+import { Subscription } from "./Subscription";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -20,6 +21,8 @@ const Index = () => {
         return <Analytics />;
       case "settings":
         return <Settings />;
+      case "subscription":
+        return <Subscription />;
       default:
         return <Dashboard />;
     }
@@ -30,7 +33,7 @@ const Index = () => {
       <MatrixBackground />
       <Header />
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
-      <main className="ml-80 mt-20 p-8 relative z-10">
+      <main className="ml-80 mt-16 p-8 relative z-10">
         {renderContent()}
       </main>
     </div>

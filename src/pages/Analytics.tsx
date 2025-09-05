@@ -63,7 +63,7 @@ export const Analytics = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Threat Patterns */}
         <div className="bg-gradient-card border border-primary/20 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-primary mb-6 font-mono uppercase tracking-wide">
@@ -87,53 +87,6 @@ export const Analytics = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* Risk Distribution Pie Chart */}
-        <div className="bg-gradient-card border border-primary/20 rounded-lg p-6">
-          <h3 className="text-lg font-semibold text-primary mb-6 font-mono uppercase tracking-wide">
-            Risk Distribution
-          </h3>
-          <div className="flex flex-col items-center">
-            <div className="relative w-48 h-48 mb-6">
-              {/* Pie Chart */}
-              <div className="w-full h-full rounded-full border-8 border-transparent"
-                style={{
-                  background: `conic-gradient(
-                    hsl(var(--destructive)) 0deg 43.2deg,
-                    hsl(var(--warning)) 43.2deg 108deg,
-                    hsl(var(--success)) 108deg 180deg,
-                    hsl(var(--primary)) 180deg 360deg
-                  )`
-                }}>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-background rounded-full border-2 border-primary/30 flex items-center justify-center">
-                  <span className="text-xs font-mono text-primary font-bold">RISK</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Legend */}
-            <div className="grid grid-cols-2 gap-3 w-full text-xs">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-destructive"></div>
-                <span className="font-mono text-muted-foreground">Critical (12%)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-warning"></div>
-                <span className="font-mono text-muted-foreground">High (18%)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-success"></div>
-                <span className="font-mono text-muted-foreground">Low (20%)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-primary"></div>
-                <span className="font-mono text-muted-foreground">Safe (50%)</span>
-              </div>
-            </div>
           </div>
         </div>
 
